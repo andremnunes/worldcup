@@ -4,7 +4,7 @@ from pathlib import Path
 
 def main():
        # Streamlit webpage properties
-       st.set_page_config(layout="wide", page_icon="📚", page_title="Book Demo 0.7.0")
+       st.set_page_config(layout="wide", page_icon="📚", page_title="WorldCup Demo 0.0.1")
 
        # Streamit book properties
        save_answers = True
@@ -12,37 +12,25 @@ def main():
        stb.set_book_config(menu_title="streamlit_book",
                             menu_icon="lightbulb",
                             options=[
-                                          "What's new on v0.7.0?",   
-                                          "Core Features", 
-                                          "Multipages", 
-                                          "Answers", 
-                                          "Admin View", 
-                                          "True/False Question",
-                                          "Single Choice Question",
-                                          "Multiple Choice Question",
-                                          "To Do List",
+                                          "Resultados das Copas do Mundo",   
+                                          "Resultados das Partidas", 
+                                          "Jogadores", 
+                                          "Clube de Origem", 
+                                          "Convocações"
                                           ], 
                             paths=[
                                           current_path / "pages/00_capa.md", 
-                                          current_path / "pages/01 Multitest", 
-                                          current_path / "pages/02_multipage.py",
-                                          current_path / "pages/03_answers.py",
-                                          current_path / "pages/04_admin_view.py",
-                                          current_path / "pages/05 TrueFalse", 
-                                          current_path / "pages/06 SingleChoice",
-                                          current_path / "pages/07 MultipleChoice",
-                                          current_path / "pages/08 ToDoList", 
+                                          current_path / "pages/01_resultado_copa_mundo.py",
+                                          current_path / "pages/02_resultado_partidas.py",
+                                          current_path / "pages/03_jogadores.py",
+                                          current_path / "pages/04_clubes_origem.py",
                                    ],
                             icons=[
                                           "code", 
                                           "robot", 
                                           "book", 
                                           "pin-angle", 
-                                          "shield-lock",
-                                          "signpost-2",
-                                          "ui-radios",
-                                          "ui-checks",
-                                          "check2-square",
+                                          "shield-lock"
                                    ],
                             save_answers=save_answers,
                             )
