@@ -12,7 +12,7 @@ import pycountry
 from pathlib import Path
 
 current_path = Path(__file__).parent.absolute()
-data_complete = pd.read_csv(current_path / '../dataset/worldcup_squads.csv', sep=';', engine='python', encoding='utf8')
+data_complete = pd.read_csv(current_path / '../dataset/worldcup_squads.csv', sep=',', engine='python', encoding='utf8')
 
 countries = {}
 for Country in pycountry.countries:
