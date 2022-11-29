@@ -18,6 +18,8 @@ countries = {}
 for Country in pycountry.countries:
   countries[Country.name] = Country.alpha_3
 
+print(countries)
+
 def ajustaCodeCountryISO(df, campo):
   df[campo + 'ISO'] = df[campo] 
   df[campo + 'ISO'] = df[campo + 'ISO'].replace('Ivory Coast','Côte d\'Ivoire')
@@ -49,6 +51,7 @@ def ajustaCodeCountryISO(df, campo):
   return(df)
 
 data_complete = ajustaCodeCountryISO(data_complete, 'Country')
+print(data_complete)
 
 data_complete['joga_proprio_pais'] = data_complete.apply(lambda x : 'Yes' if x['Country'] == x['ClubCountry'] else 'No', axis=1)
 data_complete['total_players'] = 0
