@@ -1,4 +1,4 @@
-data_complete = pd.read_csv('../squads.csv', sep=';', engine='python', encoding='utf8')
+data_complete = pd.read_csv('../dataset/squads.csv', sep=';', engine='python', encoding='utf8')
 
 import pandas as pd
 import numpy as np
