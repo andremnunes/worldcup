@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pycountry
+from pathlib import Path
 
 data_complete = pd.read_csv('/dataset/worldcup_squads.csv', sep=';', engine='python', encoding='utf8')
 
