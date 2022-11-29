@@ -16,7 +16,7 @@ for Country in pycountry.countries:
   countries[Country.name] = Country.alpha_3
 
 current_path = Path(__file__).parent.absolute()
-data_complete = pd.read_csv(current_path / '../dataset/worldcup_squads.csv', sep=',', engine='python', encoding='utf8')
+df_csv = pd.read_csv(current_path / '../dataset/worldcup_squads.csv', sep=',', engine='python', encoding='utf8')
     
 def ajustaCodeCountryISO(df, campo):
   df[campo + 'ISO'] = df[campo] 
