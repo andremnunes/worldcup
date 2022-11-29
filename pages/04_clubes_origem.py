@@ -18,8 +18,9 @@ countries = {}
 for Country in pycountry.countries:
   countries[Country.name] = Country.alpha_3
 
-print(countries)
-
+ 
+st.write("Onde estão concentrados os grandes jogadores do planeta? Esta concentração mudou ao longo das Copas?")
+    
 def ajustaCodeCountryISO(df, campo):
   df[campo + 'ISO'] = df[campo] 
   df[campo + 'ISO'] = df[campo + 'ISO'].replace('Ivory Coast','Côte d\'Ivoire')
@@ -51,7 +52,7 @@ def ajustaCodeCountryISO(df, campo):
   return(df)
 
 data_complete = ajustaCodeCountryISO(data_complete, 'Country')
-print(data_complete)
+st.dataframe(data_complete)
 
 data_complete['joga_proprio_pais'] = data_complete.apply(lambda x : 'Yes' if x['Country'] == x['ClubCountry'] else 'No', axis=1)
 data_complete['total_players'] = 0
@@ -79,4 +80,4 @@ fig = px.choropleth(dados_final2.sort_values('Year'), locations="ClubCountry_Cod
                     color_continuous_scale=px.colors.sequential.Plasma[::-1],
                     animation_frame='Year')
 
-fig.show()
+st.plotly_chart(fig, use_container_width=True)
