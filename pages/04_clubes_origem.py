@@ -11,7 +11,8 @@ import streamlit as st
 import pycountry
 from pathlib import Path
 
-data_complete = pd.read_csv('/dataset/worldcup_squads.csv', sep=';', engine='python', encoding='utf8')
+current_path = Path(__file__).parent.absolute()
+data_complete = pd.read_csv(current_path / 'dataset/worldcup_squads.csv', sep=';', engine='python', encoding='utf8')
 
 countries = {}
 for Country in pycountry.countries:
