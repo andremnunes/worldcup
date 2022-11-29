@@ -23,7 +23,7 @@ def main():
                                           "To Do List",
                                           ], 
                             paths=[
-                                          current_path / "pages/00_whats_new.py", 
+                                          current_path / "pages/00_capa.md", 
                                           current_path / "pages/01 Multitest", 
                                           current_path / "pages/02_multipage.py",
                                           current_path / "pages/03_answers.py",
