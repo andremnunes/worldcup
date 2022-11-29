@@ -1,3 +1,11 @@
 streamlit
 streamlit_book==0.7.0
-#git+https://github.com/sebastiandres/streamlit_book.git
+pandas
+numpy
+matplotlib
+plotly
+altair
+pandas
+numpy
+streamlit
+pycountry
