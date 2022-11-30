@@ -11,22 +11,29 @@ def main():
     # Streamit book properties
     current_path = Path(__file__).parent.absolute()
     
-    stb.set_book_config(menu_title="Datasaurus Rex",
-                    menu_icon="info-square",
-                    options=[
-                            "Welcome!",
-                            "What is a Datasaurus?",
-                            "Where can I see one?",
-                            "Can I create a Datasaurus?",
-                            "About"
-                            ],
-                    paths=[
-                            "docs/01_resultado_copa_mundo",
-                            "docs/01_intro.py",
-                            "docs/03_datasaurus.py",
-                            "docs/04_custom.py",
-                            "docs/05_about.py"
-                          ],
+    stb.set_book_config(menu_title="streamlit_book",
+                        menu_icon="lightbulb",
+                        options=[
+                                      "Resultados das Copas do Mundo",   
+                                      "Resultados das Partidas", 
+                                      "Jogadores", 
+                                      "Clube de Origem", 
+                                      ], 
+                        paths=[
+                                      "pages/01_Resultado_Copa_Mundo",
+                                      "pages/02_Resultado_Partidas.py",
+                                      "pages/03_Jogadores.py",
+                                      "pages/04_Clubes_Origem.py",
+                               ],
+                        icons=[
+                                      "code", 
+                                      "robot", 
+                                      "book", 
+                                      "pin-angle", 
+                                      "shield-lock"
+                               ],
+                        orientation=None, styles=None, save_answers=False
+                        )
 
 
 if __name__ == "__main__":
