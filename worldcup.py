@@ -11,7 +11,13 @@ def main():
     # Streamit book properties
     current_path = Path(__file__).parent.absolute()
     
-    stb.set_book_config(paths="pages")
+    stb.set_book_config(paths="pages",
+                        options=[
+                                      "Resultados das Copas do Mundo",   
+                                      "Resultados das Partidas", 
+                                      "Jogadores", 
+                                      "Clube de Origem", 
+                                      ])
 
 
 if __name__ == "__main__":
