@@ -11,29 +11,7 @@ def main():
     # Streamit book properties
     current_path = Path(__file__).parent.absolute()
     
-    stb.set_book_config(menu_title="streamlit_book",
-                        menu_icon="lightbulb",
-                        options=[
-                                      "Resultados das Copas do Mundo",   
-                                      "Resultados das Partidas", 
-                                      "Jogadores", 
-                                      "Clube de Origem", 
-                                      ], 
-                        paths=[
-                                      current_path / "pages/01_resultado_copa_mundo.py",
-                                      current_path / "pages/02_resultado_partidas.py",
-                                      current_path / "pages/03_jogadores.py",
-                                      current_path / "pages/04_clubes_origem.py",
-                               ],
-                        icons=[
-                                      "code", 
-                                      "robot", 
-                                      "book", 
-                                      "pin-angle", 
-                                      "shield-lock"
-                               ],
-                        orientation=None, styles=None, save_answers=False
-                        )
+    stb.set_book_config(path="current_path / "/pages")
 
 
 if __name__ == "__main__":
