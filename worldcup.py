@@ -11,7 +11,7 @@ def main():
     # Streamit book properties
     current_path = Path(__file__).parent.absolute()
     
-    stb.set_book_config(path="pages")
+    stb.set_book_config(paths="pages")
 
 
 if __name__ == "__main__":
