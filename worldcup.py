@@ -20,7 +20,7 @@ def main():
                                       "Clube de Origem", 
                                       ], 
                         paths=[
-                                      "pages/01_Resultado_Copa_Mundo",
+                                      "pages/01_Resultado_Copa_Mundo/01.py",
                                       "pages/02_Resultado_Partidas.py",
                                       "pages/03_Jogadores.py",
                                       "pages/04_Clubes_Origem.py",
