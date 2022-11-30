@@ -20,10 +20,10 @@ def main():
                                       "Clube de Origem", 
                                       ], 
                         paths=[
-                                      "pages/01_resultado_copa_mundo.py",
-                                      "pages/02_resultado_partidas.py",
-                                      "pages/03_jogadores.py",
-                                      "pages/04_clubes_origem.py",
+                                      current_path / "pages/01_resultado_copa_mundo.py",
+                                      current_path / "pages/02_resultado_partidas.py",
+                                      current_path / "pages/03_jogadores.py",
+                                      current_path / "pages/04_clubes_origem.py",
                                ],
                         icons=[
                                       "code", 
