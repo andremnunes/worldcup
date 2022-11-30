@@ -12,7 +12,7 @@ from pathlib import Path
 import streamlit as st
 import streamlit_book as stb
 
-stb.set_chapter_config(path='01_resultado_copa_mundo.py')
+stb.set_chapter_config(path='pages/01_resultado_copa_mundo.py')
 
 current_path = Path(__file__).parent.absolute()
 st.write(current_path)
