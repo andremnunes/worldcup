@@ -273,7 +273,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('https://raw.githubusercontent.com/andremnunes/worldcup/main/logo.png')
+set_bg_hack('logo.png')
 
 # -------------------
 
@@ -300,23 +300,23 @@ nome_dataset = st.selectbox('Qual o conjunto de dados gostaria de analisar?',
 
 if nome_dataset == "Resultados das Copas do Mundo":
   option = "ResultadoCopa"
-  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCups.csv"
+  arquivo_csv = "dataset/WorldCups.csv"
   nome_csv = "WorldCups.csv"
 elif nome_dataset == "Resultados das Partidas":
   option = "ResultadoPartidas"
-  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCupMatches.csv"
+  arquivo_csv = "dataset/WorldCupMatches.csv"
   nome_csv = "WorldCupMatches.csv"
 elif nome_dataset == "Jogadores":
   option = "Jogadores"
-  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCupPlayers.csv"
+  arquivo_csv = "dataset/WorldCupPlayers.csv"
   nome_csv = "WorldCupPlayers.csv"
 elif nome_dataset == "Clube de Origem":
   option = "ClubeOrigem"
-  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/worldcup_squads.csv"
+  arquivo_csv = "dataset/worldcup_squads.csv"
   nome_csv = "worldcup_squads.csv"
 elif nome_dataset == "Convocações":
   option = "Convocacoes"
-  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/worldcup_squads.csv"
+  arquivo_csv = "dataset/worldcup_squads.csv"
   nome_csv = "worldcup_squads.csv"
 else:
   option = ""
@@ -1059,7 +1059,7 @@ if st.checkbox('GRÁFICOS'):
     if st.checkbox('WORD CLOUD'):
       categorical = [var for var in df.columns if df[var].dtype=='O']
       column = st.selectbox('Selecione a coluna', categorical)
-      imagem = st.selectbox('Selecione a imagem', ['https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'])
+      imagem = st.selectbox('Selecione a imagem', ['bola.png'])
       x = column.strip()
       try:
         text = " ".join(var for var in df[x])
