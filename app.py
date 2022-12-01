@@ -805,7 +805,7 @@ if st.checkbox('GRÁFICOS'):
       
       st.altair_chart(mychart2.mark_bar().add_selection(selection3).add_selection(selection2).transform_filter(selection3).transform_filter(selection2).interactive(), use_container_width=True)
 
-      arquivo_csv = ""https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCups.csv"
+      arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCups.csv"
       df_world_cups = pd.read_csv(arquivo_csv, sep=',', thousands='.')
       anos_vitoria=df_world_cups.loc[(df_world_cups['Winner'] == "Brazil")]['Year'].to_list()
       import datetime
