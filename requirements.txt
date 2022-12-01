@@ -16,4 +16,4 @@ googletrans==3.1.0a0
 missingno
 streamlit-aggrid
 googletrans
-from wordcloud import WordCloud
+WordCloud
