@@ -1110,7 +1110,7 @@ if option == "Convocacoes":
   ####### TODO: Precisa rever isso pois já existe o código e precisa externalizar em uma função
   ######################################################################
 
-  arquivo_csv = ""https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCups.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCups.csv"
   df_csv = pd.read_csv(arquivo_csv, sep=',', thousands='.')    
   # Pré-processamento
   # =====================
