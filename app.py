@@ -292,7 +292,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/logo.png')
+set_background('logo.png')
 # -------------------
 
 #image = Image.open('logo.png')
