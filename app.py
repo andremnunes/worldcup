@@ -273,7 +273,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('logo.png')
+set_bg_hack('https://github.com/andremnunes/worldcup/blob/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/logo.png')
 
 # -------------------
 
@@ -300,23 +300,23 @@ nome_dataset = st.selectbox('Qual o conjunto de dados gostaria de analisar?',
 
 if nome_dataset == "Resultados das Copas do Mundo":
   option = "ResultadoCopa"
-  arquivo_csv = "dataset/WorldCups.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCupMatches.csv"
   nome_csv = "WorldCups.csv"
 elif nome_dataset == "Resultados das Partidas":
   option = "ResultadoPartidas"
-  arquivo_csv = "dataset/WorldCupMatches.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCupMatches.csv"
   nome_csv = "WorldCupMatches.csv"
 elif nome_dataset == "Jogadores":
   option = "Jogadores"
-  arquivo_csv = "dataset/WorldCupPlayers.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/WorldCupPlayers.csv"
   nome_csv = "WorldCupPlayers.csv"
 elif nome_dataset == "Clube de Origem":
   option = "ClubeOrigem"
-  arquivo_csv = "dataset/worldcup_squads.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/worldcup_squads.csv"
   nome_csv = "worldcup_squads.csv"
 elif nome_dataset == "Convocações":
   option = "Convocacoes"
-  arquivo_csv = "dataset/worldcup_squads.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/dataset/worldcup_squads.csv"
   nome_csv = "worldcup_squads.csv"
 else:
   option = ""
