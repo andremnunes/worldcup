@@ -277,7 +277,7 @@ set_bg_hack('./logo.png')
 
 # -------------------
 
-#image = Image.open('https://raw.githubusercontent.com/andremnunes/worldcup/main/logo.png')
+#image = Image.open('logo.png')
 #st.image(image, caption='FIFA World Cup 2022')
 
 # https://docs.streamlit.io/library/api-reference/text
@@ -1472,17 +1472,18 @@ if option == "ClubeOrigem":
     if st.checkbox('Marque para exibir uma nuvem de palavra dos clubes que tiveram mais jogadores convocados ao longo das Copas'):
       #categorical = [var for var in df_csv.columns if df_csv[var].dtype=='O']
       #column = st.selectbox('Selecione a coluna', categorical)
-      #imagem = st.selectbox('Selecione a imagem', ['https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'])
+      #imagem = st.selectbox('Selecione a imagem', ['bola.png'])
 
       filtro = ['Mundo', 'Brasil']
       selecao_filtro = st.selectbox('Selecione o filtro', filtro)
       column = 'Club'
 
       if selecao_filtro == 'Brasil':
-        imagem = 'https://raw.githubusercontent.com/andremnunes/worldcup/main/mapa_brasil.png'
+        imagem = 'mapa_brasil.png'
+        imagem = 'bola.png'
         df_cloud = df_csv.loc[df_csv['ClubCountry'] == 'Brazil']
       else:
-        imagem = 'https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'
+        imagem = 'bola.png'
         df_cloud = df_csv
 
 
