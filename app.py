@@ -273,7 +273,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('https://github.com/andremnunes/worldcup/blob/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/logo.png')
+set_bg_hack('https://raw.githubusercontent.com/andremnunes/worldcup/c0848f0c80b075ad6f84ba1b927d6e7487ef90ea/logo.png')
 
 # -------------------
 
