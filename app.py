@@ -1,7 +1,6 @@
-
-import googletrans
-from googletrans import Translator
-translator = Translator()
+#import googletrans
+#from googletrans import Translator
+#translator = Translator()
 
 # ------------------------------------------------------------------------------
 # Bibliotecas
