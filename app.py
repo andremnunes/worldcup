@@ -273,7 +273,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('logo.png')
+set_bg_hack('https://github.com/andremnunes/worldcup/blob/main/logo.png')
 
 # -------------------
 
@@ -1058,7 +1058,7 @@ if st.checkbox('GRÁFICOS'):
     if st.checkbox('WORD CLOUD'):
       categorical = [var for var in df.columns if df[var].dtype=='O']
       column = st.selectbox('Selecione a coluna', categorical)
-      imagem = st.selectbox('Selecione a imagem', ['bola.png'])
+      imagem = st.selectbox('Selecione a imagem', ['https://github.com/andremnunes/worldcup/blob/main/bola.png'])
       x = column.strip()
       try:
         text = " ".join(var for var in df[x])
@@ -1470,15 +1470,15 @@ if option == "ClubeOrigem":
     if st.checkbox('Marque para exibir uma nuvem de palavra dos clubes que tiveram mais jogadores convocados ao longo das Copas'):
       #categorical = [var for var in df_csv.columns if df_csv[var].dtype=='O']
       #column = st.selectbox('Selecione a coluna', categorical)
-      #imagem = st.selectbox('Selecione a imagem', ['bola.png'])
+      #imagem = st.selectbox('Selecione a imagem', ['https://github.com/andremnunes/worldcup/blob/main/bola.png'])
 
       filtro = ['Mundo', 'Brasil']
       selecao_filtro = st.selectbox('Selecione o filtro', filtro)
       column = 'Club'
 
       if selecao_filtro == 'Brasil':
-        imagem = 'mapa_brasil.png'
-        imagem = 'bola.png'
+        imagem = 'https://github.com/andremnunes/worldcup/blob/main/mapa_brasil.png'
+        imagem = 'https://github.com/andremnunes/worldcup/blob/main/bola.png'
         df_cloud = df_csv.loc[df_csv['ClubCountry'] == 'Brazil']
       else:
         imagem = 'bola.png'
