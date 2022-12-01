@@ -300,28 +300,32 @@ nome_dataset = st.selectbox('Qual o conjunto de dados gostaria de analisar?',
 
 if nome_dataset == "Resultados das Copas do Mundo":
   option = "ResultadoCopa"
-  arquivo_csv = "WorldCups.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCups.csv"
+  nome_csv = "WorldCups.csv"
 elif nome_dataset == "Resultados das Partidas":
   option = "ResultadoPartidas"
-  arquivo_csv = "WorldCupMatches.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCupMatches.csv"
+  nome_csv = "WorldCupMatches.csv"
 elif nome_dataset == "Jogadores":
   option = "Jogadores"
-  arquivo_csv = "WorldCupPlayers.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCupPlayers.csv"
+  nome_csv = "WorldCupPlayers.csv"
 elif nome_dataset == "Clube de Origem":
   option = "ClubeOrigem"
-  arquivo_csv = "worldcup_squads.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/worldcup_squads.csv"
+  nome_csv = "worldcup_squads.csv"
 elif nome_dataset == "Convocações":
   option = "Convocacoes"
-  arquivo_csv = "worldcup_squads.csv"
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/worldcup_squads.csv"
+  nome_csv = "worldcup_squads.csv"
 else:
   option = ""
 
-st.write(f'Você escolheu: {nome_dataset} ({arquivo_csv})')
+st.write(f'Você escolheu: {nome_dataset} ({nome_csv})')
 
 # ------------------------------------------------------------------------------
 
 if option == "ResultadoCopa":
-  arquivo_csv = "WorldCups.csv"
   df_csv = pd.read_csv(arquivo_csv, sep=',', thousands='.')
 
   # ----------------------------------------------------------------------------
@@ -379,7 +383,6 @@ if option == "ResultadoCopa":
   # ----------------------------------------------------------------------------
 
 elif option == "ResultadoPartidas":
-  arquivo_csv = "WorldCupMatches.csv"
   df_csv = pd.read_csv(arquivo_csv)
   df_csv.drop_duplicates(inplace=True)
 
@@ -409,7 +412,6 @@ elif option == "ResultadoPartidas":
   df_csv['Stage'] = df_csv['Stage'].replace(to_replace='Third place play-off', value = 'Disputa pelo terceiro lugar')
 
 elif option == "Jogadores":
-  arquivo_csv = "WorldCupPlayers.csv"
   df_csv = pd.read_csv(arquivo_csv)
   df_csv.drop_duplicates(inplace=True)
 
@@ -421,12 +423,10 @@ elif option == "Jogadores":
   df_csv.replace(to_replace='Germany FR', value='Germany', inplace=True)
 
 elif option == "ClubeOrigem":
-  arquivo_csv = "worldcup_squads.csv"
   df_csv = pd.read_csv(arquivo_csv)
   df_csv.drop_duplicates(inplace=True)
 
 elif option == "Convocacoes":
-  arquivo_csv = "worldcup_squads.csv"
   df_csv = pd.read_csv(arquivo_csv)
   df_csv.drop_duplicates(inplace=True)
 
