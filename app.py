@@ -265,7 +265,7 @@ def set_bg_hack(main_bg):
          f"""
          <style>
          .stApp {{
-             background: url(main_bg);
+             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
              background-size: cover
          }}
          </style>
