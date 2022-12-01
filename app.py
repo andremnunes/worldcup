@@ -273,11 +273,11 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('https://github.com/andremnunes/worldcup/blob/main/logo.png?raw=true')
+set_bg_hack('https://raw.githubusercontent.com/andremnunes/worldcup/main/logo.png')
 
 # -------------------
 
-#image = Image.open('logo.png')
+#image = Image.open('https://raw.githubusercontent.com/andremnunes/worldcup/main/logo.png')
 #st.image(image, caption='FIFA World Cup 2022')
 
 # https://docs.streamlit.io/library/api-reference/text
@@ -1058,7 +1058,7 @@ if st.checkbox('GRÁFICOS'):
     if st.checkbox('WORD CLOUD'):
       categorical = [var for var in df.columns if df[var].dtype=='O']
       column = st.selectbox('Selecione a coluna', categorical)
-      imagem = st.selectbox('Selecione a imagem', ['https://github.com/andremnunes/worldcup/blob/main/bola.png?raw=true'])
+      imagem = st.selectbox('Selecione a imagem', ['https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'])
       x = column.strip()
       try:
         text = " ".join(var for var in df[x])
@@ -1470,18 +1470,17 @@ if option == "ClubeOrigem":
     if st.checkbox('Marque para exibir uma nuvem de palavra dos clubes que tiveram mais jogadores convocados ao longo das Copas'):
       #categorical = [var for var in df_csv.columns if df_csv[var].dtype=='O']
       #column = st.selectbox('Selecione a coluna', categorical)
-      #imagem = st.selectbox('Selecione a imagem', ['https://github.com/andremnunes/worldcup/blob/main/bola.png?raw=true'])
+      #imagem = st.selectbox('Selecione a imagem', ['https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'])
 
       filtro = ['Mundo', 'Brasil']
       selecao_filtro = st.selectbox('Selecione o filtro', filtro)
       column = 'Club'
 
       if selecao_filtro == 'Brasil':
-        imagem = 'https://github.com/andremnunes/worldcup/blob/main/mapa_brasil.png?raw=true'
-        imagem = 'https://github.com/andremnunes/worldcup/blob/main/bola.png?raw=true'
+        imagem = 'https://raw.githubusercontent.com/andremnunes/worldcup/main/mapa_brasil.png'
         df_cloud = df_csv.loc[df_csv['ClubCountry'] == 'Brazil']
       else:
-        imagem = 'bola.png'
+        imagem = 'https://raw.githubusercontent.com/andremnunes/worldcup/main/bola.png'
         df_cloud = df_csv
 
 
