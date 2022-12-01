@@ -805,7 +805,8 @@ if st.checkbox('GRÁFICOS'):
       
       st.altair_chart(mychart2.mark_bar().add_selection(selection3).add_selection(selection2).transform_filter(selection3).transform_filter(selection2).interactive(), use_container_width=True)
 
-      df_world_cups = pd.read_csv("WorldCups.csv", sep=',', thousands='.')
+      arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCups.csv"
+      df_world_cups = pd.read_csv(arquivo_csv, sep=',', thousands='.')
       anos_vitoria=df_world_cups.loc[(df_world_cups['Winner'] == "Brazil")]['Year'].to_list()
       import datetime
       anos_vitoria.append(int(datetime.date.today().strftime("%Y")))
@@ -1109,7 +1110,8 @@ if option == "Convocacoes":
   ####### TODO: Precisa rever isso pois já existe o código e precisa externalizar em uma função
   ######################################################################
 
-  df_csv = pd.read_csv('WorldCups.csv', sep=',', thousands='.')    
+  arquivo_csv = "https://raw.githubusercontent.com/andremnunes/worldcup/main/dataset/WorldCups.csv"
+  df_csv = pd.read_csv(arquivo_csv, sep=',', thousands='.')    
   # Pré-processamento
   # =====================
   # https://en.wikipedia.org/wiki/2018_FIFA_World_Cup
