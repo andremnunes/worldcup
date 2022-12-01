@@ -10,3 +10,8 @@ numpy
 streamlit
 pycountry
 Path
+pyngrok
+nx_altair
+googletrans==3.1.0a0
+missingno
+streamlit-aggrid
